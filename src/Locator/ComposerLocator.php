@@ -51,8 +51,7 @@ class ComposerLocator implements LocatorInterface
      */
     public function locateClass($className)
     {
-        $normalizedClassName = ltrim($className, '\\');
-        $filePath = $this->loader->findFile($normalizedClassName);
+        $filePath = $this->loader->findFile($className);
         if (!empty($filePath)) {
             $filePath = PathResolver::realpath($filePath);
         }

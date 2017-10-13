@@ -13,9 +13,5 @@ class ComposerLocatorTest extends \PHPUnit_Framework_TestCase
             $reflectionClass->getFileName(),
             $locator->locateClass(ReflectionClass::class)
         );
-        $this->assertSame(
-            $reflectionClass->getFileName(),
-            $locator->locateClass('\\' . ReflectionClass::class)
-        );
     }
 }
